@@ -2,6 +2,9 @@ package com.company;
 
 public class KeaKillKlubService extends KEAService{
 
+    String name = "KEA Kill Klub";
+    final int no = 2;
+
     public void clean_machine(){
         int scanning = 3;
         System.out.println("Scanning for covid cases...");
@@ -18,4 +21,8 @@ public class KeaKillKlubService extends KEAService{
 
     }
 
+    @Override
+    public void run() {
+        clean_machine();
+    }
 }
