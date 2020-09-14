@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LyingCakeDispenserService extends KEAService {
 
-    public void cakeDispenser(){
+    public void dispense(){
         System.out.println("Which cake would you like today piggy?");
         System.out.println("We have: chocolate cake, carrot cake, tiramisu and space cake.");
 
