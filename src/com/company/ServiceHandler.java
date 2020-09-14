@@ -66,8 +66,8 @@ public class ServiceHandler {
 
     public void searchList(String quote){
         for(KEAService service : serviceList){
-            if(quote.equals(service.name)) {
-                System.out.println("Service found!: " + service.name);
+            if(quote.equals(service.getName())) {
+                System.out.println("Service found!: " + service.getName());
                 service.run();
             }
 

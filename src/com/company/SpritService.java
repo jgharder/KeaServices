@@ -1,7 +1,8 @@
 package com.company;
 
 public class SpritService extends KEAService {
-    
+
+    public String name = "Sprit Service";
     final int no = 3;
 
     public void sanitize() {
@@ -34,5 +35,10 @@ public class SpritService extends KEAService {
     @Override
     public void run(){
         sanitize();
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }

@@ -1,8 +1,6 @@
 package com.company;
 
 public abstract class KEAService {
-    public String name;
-
     /*
     public void accessKea(){
         System.out.println("Access Granted");
@@ -13,6 +11,8 @@ public abstract class KEAService {
     }
 
     public abstract void run();
+
+    public abstract String getName();
 
 }
 

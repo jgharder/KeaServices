@@ -2,7 +2,7 @@ package com.company;
 
 public class KeaKillKlubService extends KEAService{
 
-    String name = "KEA Kill Klub";
+    public String name = "KEA Kill Klub";
     final int no = 2;
 
     public void clean_machine(){
@@ -24,5 +24,10 @@ public class KeaKillKlubService extends KEAService{
     @Override
     public void run() {
         clean_machine();
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }

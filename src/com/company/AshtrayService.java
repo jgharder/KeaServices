@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class AshtrayService extends KEAService
 {
-    String name = "Askebæger";
+    public String name = "Askebæger";
     final int no = 5;
+
     public boolean ashtrayEnding = false;
 
     public void emptyAshtray(){
@@ -33,6 +34,11 @@ public class AshtrayService extends KEAService
             ashtrayEnding = true;
 
         }
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }
 

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LyingCakeDispenserService extends KEAService {
 
-    String name = "Cake Dispenser";
+    public String name = "Cake Dispenser";
     final int no = 4;
 
     public void dispense(){
@@ -26,5 +26,10 @@ public class LyingCakeDispenserService extends KEAService {
     @Override
     public void run() {
         dispense();
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }

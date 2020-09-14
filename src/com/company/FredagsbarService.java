@@ -1,7 +1,7 @@
 package com.company;
 
 public class FredagsbarService extends KEAService {
-    String name = "Fredagsbar";
+    public String name = "Fredagsbar";
     final int no = 1;
     public void cheers(){
         System.out.println("Cheers");
@@ -10,5 +10,10 @@ public class FredagsbarService extends KEAService {
     @Override
     public void run() {
         cheers();
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }
