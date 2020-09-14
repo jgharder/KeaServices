@@ -8,7 +8,7 @@ public class LyingCakeDispenserService extends KEAService {
     final int no = 4;
 
     public void dispense(){
-        System.out.println("Which cake would you like today piggy?");
+        System.out.println("Which cake would you like today, piggy?");
         System.out.println("We have: chocolate cake, carrot cake, tiramisu and space cake.");
 
         Scanner scanner = new Scanner(System.in);
@@ -19,7 +19,8 @@ public class LyingCakeDispenserService extends KEAService {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("The cake is a lie! ");
+        System.out.println("The cake is a lie!");
+        System.out.println();
     }
 
 

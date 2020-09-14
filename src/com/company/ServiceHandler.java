@@ -5,6 +5,43 @@ import java.util.Scanner;
 
 public class ServiceHandler {
     ArrayList<KEAService> serviceList;
+
+    /*
+    *
+    * ArrayList Edition
+    *
+    * */
+    public ServiceHandler(ArrayList<KEAService> list){
+        serviceList = list;
+    }
+
+    //search the ArrayList of services for specific name
+    public void searchList(String quote){
+        for(KEAService service : serviceList){
+            //matches on name
+            if(quote.equals(service.getName())) {
+                service.run();
+                return;
+            }
+        }
+
+        //no valid input.
+        System.out.println("I did not understand that");
+        System.out.println("Please try one of the following:");
+
+        //print out all the names of the services.
+        for(int i = 0; i<serviceList.size();i++){
+            System.out.println("" + serviceList.get(i).getName());
+        }
+        System.out.println(); //new line for next iteration of user input.
+    }
+
+    /*
+     *
+     * Switch-case-edition
+     * (depcricated)
+     *
+     * */
     public ServiceHandler(FredagsbarService fredagsbarService, KeaKillKlubService keaKillKlubService, SpritService spritService, AshtrayService ashtrayService, LyingCakeDispenserService lyingCakeDispenserService){
         boolean ashtrayEnding = false;
         do {
@@ -15,64 +52,30 @@ public class ServiceHandler {
 
             switch (match) {
                 case "Fredagsbar":
-                    System.out.println("Excellent choice, commander. I am quite parched myself.");
-                    fredagsbarService.cheers();
+                    fredagsbarService.run();
                     break;
                 case "Kill Klub":
-                    System.out.println("Ah, I see, Commander, it's time to deal with those pesky infected.");
-                    keaKillKlubService.clean_machine();
+                    keaKillKlubService.run();
                     break;
                 case "Lying Cake Dispenser":
-                    System.out.println("Good choice, Commander. It's always time for cake. Isn't it?");
-                    lyingCakeDispenserService.dispense();
+                    lyingCakeDispenserService.run();
                     break;
                 case "Sprit Service":
-                    System.out.println("Clever choice, Commander. Always remember to sanitize.");
-                    spritService.sanitize();
+                    spritService.run();
                     break;
                 case "Askebæger":
-                    System.out.println("It's that time again, huh Commander?");
-                    System.out.println("Is your current ashtray full? (y/n)");
-                    Scanner prompt = new Scanner(System.in);
-                    String answer = prompt.nextLine();
-                    if (answer.equals("y")) {
-                        ashtrayService.emptyAshtray();
+                    ashtrayService.run();
+                    ashtrayEnding = ashtrayService.ashtrayEnding;
                         break;
-                    } else if (answer.equals("n")) {
-                        ashtrayService.callOverAshtray();
-                        break;
-                    } else {
-                        System.out.println("I did not understand that. Intruder detected.\nLocking down KEA.");
-                        ashtrayService.lockKea();
-                        ashtrayEnding = true;
-                        break;
-                    }
                 default:
                     System.out.println("I did not quite understand that, Commander, please try one of the following:");
-                    System.out.println("Fredagsbar");
-                    System.out.println("Kill Klub");
-                    System.out.println("Lying Cake Dispenser");
-                    System.out.println("Sprit Service");
-                    System.out.println("Askebæger");
-                    System.out.println();
+                    for(int i = 0; i<serviceList.size();i++){
+                        System.out.println("" + serviceList.get(i).getName());
+                    }
+                    System.out.println(); //new line for next iteration of user input.
             }
         } while (!ashtrayEnding);
 
     }
-
-    public ServiceHandler(ArrayList<KEAService> list){
-        serviceList = list;
-    }
-
-    public void searchList(String quote){
-        for(KEAService service : serviceList){
-            if(quote.equals(service.getName())) {
-                System.out.println("Service found!: " + service.getName());
-                service.run();
-            }
-
-        }
-    }
-
 
 }

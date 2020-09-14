@@ -4,7 +4,8 @@ public class FredagsbarService extends KEAService {
     public String name = "Fredagsbar";
     final int no = 1;
     public void cheers(){
-        System.out.println("Cheers");
+        System.out.println("Excellent choice, Commander. I was getting parched myself.");
+        System.out.println("Cheers, Commander!");
     }
 
     @Override
