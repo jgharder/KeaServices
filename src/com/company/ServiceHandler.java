@@ -2,7 +2,7 @@ package com.company;
 import java.security.Provider;
 import java.util.ArrayList;
 
-public class ListOfServices {
+public class ServiceHandler {
     public ArrayList<KEAService> keaServices = new ArrayList<>();
 
     public ArrayList<KEAService> getKeaServices() {

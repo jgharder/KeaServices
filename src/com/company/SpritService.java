@@ -1,6 +1,6 @@
 package com.company;
 
-public class SpritService{
+public class SpritService extends KEAService{
 
 
     public void sanitize() {

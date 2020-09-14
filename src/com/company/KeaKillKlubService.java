@@ -1,5 +1,5 @@
 package com.company;
 
-public class KeaKillKlubService {
+public class KeaKillKlubService extends KEAService{
 
 }
