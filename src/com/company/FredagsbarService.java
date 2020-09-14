@@ -1,4 +1,4 @@
 package com.company;
 
-public class FredagsbarService {
+public class FredagsbarService extends KEAService {
 }

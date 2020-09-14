@@ -1,6 +1,6 @@
 package com.company;
 
-public abstract class Service {
+public abstract class KEAService {
    /*    Metode    */
 
     public void accessKea(){

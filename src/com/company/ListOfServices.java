@@ -1,17 +1,15 @@
 package com.company;
+import java.security.Provider;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Arrays;
-
 
 public class ListOfServices {
-    public ArrayList<Service> keaServices = new ArrayList<>();
+    public ArrayList<KEAService> keaServices = new ArrayList<>();
 
-    public ArrayList<Service> getKeaServices() {
+    public ArrayList<KEAService> getKeaServices() {
         return keaServices;
     }
 
-    public void setKeaServices(ArrayList<Service> keaServices) {
+    public void setKeaServices(ArrayList<KEAService> keaServices) {
         this.keaServices = keaServices;
     }
 

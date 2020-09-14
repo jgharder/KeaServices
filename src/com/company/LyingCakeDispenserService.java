@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class CakeDispenserThatLiesService {
+public class LyingCakeDispenserService {
 
     public void cakeDispenser(){
         System.out.println("Which cake would you like today piggy?");

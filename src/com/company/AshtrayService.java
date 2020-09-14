@@ -1,7 +1,6 @@
 package com.company;
 
-public class Askebægerservice 
-
+public class AshtrayService extends KEAService
 {
     public void emptyAshtray(){
         System.out.println("Ashtray has been emptied, and is ready for use again..");
