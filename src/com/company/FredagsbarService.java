@@ -6,6 +6,7 @@ public class FredagsbarService extends KEAService {
     public void cheers(){
         System.out.println("Excellent choice, Commander. I was getting parched myself.");
         System.out.println("Cheers, Commander!");
+        System.out.println();
     }
 
     @Override

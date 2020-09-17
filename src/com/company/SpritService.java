@@ -30,6 +30,7 @@ public class SpritService extends KEAService {
         }
 
         System.out.println("Sanitizer rubbing complete, please discard the used T-shirts, have a nice and safe day.");
+        System.out.println();
     }
 
     @Override
